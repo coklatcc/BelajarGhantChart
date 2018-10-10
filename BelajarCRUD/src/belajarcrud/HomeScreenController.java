@@ -79,8 +79,8 @@ public class HomeScreenController implements Initializable {
             jenisCol.setCellValueFactory(new PropertyValueFactory<>("jenis_idjenis"));
             civitasCol.setCellValueFactory(new PropertyValueFactory<>("civitas_idcivitas"));
             statusCol.setCellValueFactory(new PropertyValueFactory<>("status_idstatus"));
+            tableView.setItems(null);
             tableView.setItems(data);
-            System.out.println(model.loadAll+"loadmethod");
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, e);
         }
@@ -93,7 +93,7 @@ public class HomeScreenController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
-        setStyleTable();
+        //setStyleTable();
         kon.db();
         loadTable();
         
@@ -101,7 +101,7 @@ public class HomeScreenController implements Initializable {
 
     @FXML
     private void loadTableAll(MouseEvent event) {
-        setStyleTable();
+        //setStyleTable();
         kon.db();
         loadTable();
         System.out.println(model.loadAll);
